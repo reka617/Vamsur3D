@@ -1,0 +1,312 @@
+{
+  "Sword": {
+    "1": {
+      "id": 1,
+      "lv": 1,
+      "power": 10,
+      "projectileCount": 1,
+      "projectileSpeed": 1,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/sword",
+      "rank": "NORMAL",
+      "desc": "근거리 베기 공격!",
+      "levelDesc": "신규 획득!"
+    },
+    "2": {
+      "id": 1,
+      "lv": 2,
+      "power": 10,
+      "projectileCount": 2,
+      "projectileSpeed": 1,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/sword",
+      "rank": "NORMAL",
+      "desc": "근거리 베기 공격!",
+      "levelDesc": "투사체 + 1"
+    },
+    "3": {
+      "id": 1,
+      "lv": 3,
+      "power": 20,
+      "projectileCount": 2,
+      "projectileSpeed": 1,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/sword",
+      "rank": "NORMAL",
+      "desc": "근거리 베기 공격!",
+      "levelDesc": "데미지 + 10\n쿨타임 - 0.5"
+    },
+    "4": {
+      "id": 1,
+      "lv": 4,
+      "power": 20,
+      "projectileCount": 3,
+      "projectileSpeed": 1,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/sword",
+      "rank": "NORMAL",
+      "desc": "근거리 베기 공격!",
+      "levelDesc": "투사체 + 1"
+    },
+    "5": {
+      "id": 1,
+      "lv": 5,
+      "power": 25,
+      "projectileCount": 4,
+      "projectileSpeed": 1,
+      "coolTime": 1,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/sword",
+      "rank": "NORMAL",
+      "desc": "근거리 베기 공격!",
+      "levelDesc": "투사체 + 1\n데미지 + 5\n쿨타임 - 0.5"
+    }
+  },
+  "Staff": {
+    "1": {
+      "id": 2,
+      "lv": 1,
+      "power": 10,
+      "projectileCount": 1,
+      "projectileSpeed": 300,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/magic",
+      "rank": "NORMAL",
+      "desc": "원형 파이어볼 발사!",
+      "levelDesc": "신규 획득!"
+    },
+    "2": {
+      "id": 2,
+      "lv": 2,
+      "power": 10,
+      "projectileCount": 2,
+      "projectileSpeed": 300,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/magic",
+      "rank": "NORMAL",
+      "desc": "원형 파이어볼 발사!",
+      "levelDesc": "투사체 + 1"
+    },
+    "3": {
+      "id": 2,
+      "lv": 3,
+      "power": 20,
+      "projectileCount": 2,
+      "projectileSpeed": 500,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/magic",
+      "rank": "NORMAL",
+      "desc": "원형 파이어볼 발사!",
+      "levelDesc": "데미지 + 10\n투사체 속도 + 200\n쿨타임 - 0.5"
+    },
+    "4": {
+      "id": 2,
+      "lv": 4,
+      "power": 20,
+      "projectileCount": 3,
+      "projectileSpeed": 700,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/magic",
+      "rank": "NORMAL",
+      "desc": "원형 파이어볼 발사!",
+      "levelDesc": "투사체 + 1\n투사체 속도 + 200"
+    },
+    "5": {
+      "id": 2,
+      "lv": 5,
+      "power": 20,
+      "projectileCount": 4,
+      "projectileSpeed": 700,
+      "coolTime": 1,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/magic",
+      "rank": "NORMAL",
+      "desc": "원형 파이어볼 발사!",
+      "levelDesc": "투사체 + 1\n쿨타임 - 0.5"
+    }
+  },
+  "Bible": {
+    "1": {
+      "id": 3,
+      "lv": 1,
+      "power": 10,
+      "projectileCount": 2,
+      "projectileSpeed": 40,
+      "coolTime": 3,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "일정시간마다 주변을 회전하는 투사체 소환!",
+      "levelDesc": "신규 획득!"
+    },
+    "2": {
+      "id": 3,
+      "lv": 2,
+      "power": 10,
+      "projectileCount": 4,
+      "projectileSpeed": 60,
+      "coolTime": 3,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "일정시간마다 주변을 회전하는 투사체 소환!",
+      "levelDesc": "투사체 + 2\n 투사체 속도 + 20"
+    },
+    "3": {
+      "id": 3,
+      "lv": 3,
+      "power": 20,
+      "projectileCount": 4,
+      "projectileSpeed": 60,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "일정시간마다 주변을 회전하는 투사체 소환!",
+      "levelDesc": "데미지 + 10\n쿨타임 - 1"
+    },
+    "4": {
+      "id": 3,
+      "lv": 4,
+      "power": 20,
+      "projectileCount": 6,
+      "projectileSpeed": 80,
+      "coolTime": 1,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "일정시간마다 주변을 회전하는 투사체 소환!",
+      "levelDesc": "투사체 + 2\n투사체 속도 + 20"
+    },
+    "5": {
+      "id": 3,
+      "lv": 5,
+      "power": 20,
+      "projectileCount": 8,
+      "projectileSpeed": 80,
+      "coolTime": 1,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "일정시간마다 주변을 회전하는 투사체 소환!",
+      "levelDesc": "투사체 + 2\n데미지 + 5"
+    }
+  },
+  "FireField": {
+    "1": {
+      "id": 4,
+      "lv": 1,
+      "power": 10,
+      "projectileCount": 1,
+      "projectileSpeed": 1,
+      "coolTime": 8,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "플레이어 주변 랜덤으로 화염 장판 소환!",
+      "levelDesc": "신규 획득!"
+    },
+    "2": {
+      "id": 4,
+      "lv": 2,
+      "power": 10,
+      "projectileCount": 2,
+      "projectileSpeed": 1,
+      "coolTime": 8,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "플레이어 주변 랜덤으로 화염 장판 소환!",
+      "levelDesc": "장판 + 1\n"
+    },
+    "3": {
+      "id": 4,
+      "lv": 3,
+      "power": 20,
+      "projectileCount": 2,
+      "projectileSpeed": 1,
+      "coolTime": 6,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "플레이어 주변 랜덤으로 화염 장판 소환!",
+      "levelDesc": "데미지 + 10\n쿨타임 - 2"
+    },
+    "4": {
+      "id": 4,
+      "lv": 4,
+      "power": 20,
+      "projectileCount": 3,
+      "projectileSpeed": 1,
+      "coolTime": 6,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "플레이어 주변 랜덤으로 화염 장판 소환!",
+      "levelDesc": "장판 + 1"
+    },
+    "5": {
+      "id": 4,
+      "lv": 5,
+      "power": 20,
+      "projectileCount": 4,
+      "projectileSpeed": 1,
+      "coolTime": 4,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/book",
+      "rank": "RARE",
+      "desc": "플레이어 주변 랜덤으로 화염 장판 소환!",
+      "levelDesc": "장판 + 1\n쿨타임 - 2"
+    }
+  },
+  "Boomerang": {
+    "1": {
+      "id": 5,
+      "lv": 1,
+      "power": 10,
+      "projectileCount": 1,
+      "projectileSpeed": 1,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/circular",
+      "rank": "EPIC",
+      "desc": "적중하면 튕기는 부메랑 투척!",
+      "levelDesc": "신규 획득!"
+    },
+    "2": {
+      "id": 5,
+      "lv": 2,
+      "power": 10,
+      "projectileCount": 2,
+      "projectileSpeed": 1,
+      "coolTime": 2,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/circular",
+      "rank": "EPIC",
+      "desc": "적중하면 튕기는 부메랑 투척!",
+      "levelDesc": "투사체 + 1"
+    },
+    "3": {
+      "id": 5,
+      "lv": 3,
+      "power": 20,
+      "projectileCount": 2,
+      "projectileSpeed": 1,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/circular",
+      "rank": "EPIC",
+      "desc": "적중하면 튕기는 부메랑 투척!",
+      "levelDesc": "데미지 + 10\n쿨타임 - 0.5"
+    },
+    "4": {
+      "id": 5,
+      "lv": 4,
+      "power": 20,
+      "projectileCount": 3,
+      "projectileSpeed": 2,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/circular",
+      "rank": "EPIC",
+      "desc": "적중하면 튕기는 부메랑 투척!",
+      "levelDesc": "투사체 + 1\n 투사체 속도 + 1(수정 필요)"
+    },
+    "5": {
+      "id": 5,
+      "lv": 5,
+      "power": 25,
+      "projectileCount": 3,
+      "projectileSpeed": 1,
+      "coolTime": 1.5,
+      "thumbnailPath": "Art/Textures/UI/icon/DarkBrownTheme/simple/circular",
+      "rank": "EPIC",
+      "desc": "적중하면 튕기는 부메랑 투척!",
+      "levelDesc": "투사체 + 1\n쿨타임 - 0.5\n데미지 + 5"
+    }
+  }
+}

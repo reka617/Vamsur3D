@@ -1,0 +1,27 @@
+{
+  "NormalMob": {
+    "id": 11,
+    "hp": 30,
+    "exp": 1,
+    "power": 3,
+    "prefabPath": "Prefabs/Monster/NormalMob",
+    "imageUrl": "sample"
+  },
+  "ProjectileMob": {
+    "id": 12,
+    "hp": 30,
+    "exp": 1,
+    "projectileCount": 1,
+    "power": 2,
+    "prefabPath": "Prefabs/Monster/ProjectileMob",
+    "imageUrl": "sample"
+  },
+  "EliteMob": {
+    "id": 13,
+    "hp": 90,
+    "exp": 5,
+    "power": 10,
+    "prefabPath": "Prefabs/Monster/EliteMob",
+    "imageUrl": "sample"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "0": {
+    "needExp": 10,
+    "sumExp": 10,
+    "nextLv": 1
+  },
+
+  "1": {
+    "needExp": 20,
+    "sumExp": 30,
+    "nextLv": 2
+  },
+
+  "2": {
+    "needExp": 30,
+    "sumExp": 60,
+    "nextLv": 3
+  },
+
+  "3": {
+    "needExp": 40,
+    "sumExp": 100,
+    "nextLv": 4
+  },
+
+  "4": {
+    "needExp": 50,
+    "sumExp": 150,
+    "nextLv": 5
+  },
+
+  "5": {
+    "needExp": 60,
+    "sumExp": 210,
+    "nextLv": 6
+  },
+
+  "6": {
+    "needExp": 70,
+    "sumExp": 280,
+    "nextLv": 7
+  },
+  "7": {
+    "needExp": 80,
+    "sumExp": 360,
+    "nextLv": 8
+  },
+  "8": {
+    "needExp": 90,
+    "sumExp": 450,
+    "nextLv": "none"
+  }
+
+
+}

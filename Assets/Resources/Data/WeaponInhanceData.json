@@ -1,0 +1,192 @@
+{
+  "Sword": [
+    {
+      "id": 1,
+      "enhanceLv": 0,
+      "power": 1,
+      "cost": 100
+    },
+    {
+      "id": 1,
+      "enhanceLv": 1,
+      "power": 1.05,
+      "cost": 100
+    },
+    {
+      "id": 1,
+      "enhanceLv": 2,
+      "power": 1.1,
+      "cost": 100
+    },
+    {
+      "id": 1,
+      "enhanceLv": 3,
+      "power": 1.15,
+      "cost": 100
+    },
+    {
+      "id": 1,
+      "enhanceLv": 4,
+      "power": 1.2,
+      "cost": 100
+    },
+    {
+      "id": 1,
+      "enhanceLv": 5,
+      "power": 1.25,
+      "cost": 100
+    }
+  ],
+  "Staff": [
+    {
+      "id": 2,
+      "enhanceLv": 0,
+      "power": 1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 1,
+      "power": 1.05,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 2,
+      "power": 1.1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 3,
+      "power": 1.15,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 4,
+      "power": 1.2,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 5,
+      "power": 1.25,
+      "cost": 100
+    }
+  ],
+  "Bible": [
+    {
+      "id": 2,
+      "enhanceLv": 0,
+      "power": 1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 1,
+      "power": 1.05,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 2,
+      "power": 1.1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 3,
+      "power": 1.15,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 4,
+      "power": 1.2,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 5,
+      "power": 1.25,
+      "cost": 100
+    }
+  ],
+  "FireField": [
+    {
+      "id": 2,
+      "enhanceLv": 0,
+      "power": 1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 1,
+      "power": 1.05,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 2,
+      "power": 1.1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 3,
+      "power": 1.15,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 4,
+      "power": 1.2,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 5,
+      "power": 1.25,
+      "cost": 100
+    }
+  ],
+  "Boomerang": [
+    {
+      "id": 2,
+      "enhanceLv": 0,
+      "power": 1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 1,
+      "power": 1.05,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 2,
+      "power": 1.1,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 3,
+      "power": 1.15,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 4,
+      "power": 1.2,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "enhanceLv": 5,
+      "power": 1.25,
+      "cost": 100
+    }
+  ]
+}
