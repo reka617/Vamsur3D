@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CaracterData : MonoBehaviour
+public class CharacterData : MonoBehaviour
 {
     [SerializeField] Image _heroImage;
     [SerializeField] Text _characterLVTXT;
@@ -17,7 +17,7 @@ public class CaracterData : MonoBehaviour
     public void Text()
     {
         _characterLVTXT.text = "레벨" + GenericSingleton<GameManager>.getInstance().HeroLv;
-        _liveTimeTXT.text = $"{GenericSingleton<GameManager>.getInstance().SurviveTime.ToString("F1")}" + "초 생존";//$문은 형변환에사용
+        _liveTimeTXT.text = $"{GenericSingleton<GameManager>.getInstance().SurviveTime.ToString("F1")}" + "초 생존";
         _goldTXT.text = "획득골드" + GenericSingleton<GameManager>.getInstance().StageGold;
         _killsTXT.text = "총킬" + GenericSingleton<GameManager>.getInstance().KillCount;
         _damagesTXT.text = "총데미지" + GenericSingleton<GameManager>.getInstance().TotalDmg;
