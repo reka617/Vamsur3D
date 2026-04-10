@@ -17,21 +17,48 @@
 
 <br>
 
-
-
-
-
 ## ✨ 주요 기능
 
-### 기능 1
-> 설명
+### 📂 JSON 기반 로컬 데이터 관리
+> JSON 파싱을 통해 게임 데이터를 로컬에서 저장 및 불러옵니다.
+> 플레이어 초기 스탯 및 무기 데이터를 JSON 포맷으로 관리합니다.
 
-### 기능 2
-> 설명
+### 🧟 몬스터 AI 시스템
+> FSM(유한 상태 머신) 기반으로 몬스터 행동 패턴을 구현했습니다.
+> Object Pooling으로 몬스터 생성/제거 비용을 최소화하고,
+> Factory Pattern으로 몬스터 종류별 생성을 관리합니다.
 
-### 기능 3
-> 설명
+### ⚔️ 플레이어 / 무기 스탯 시스템
+> JSON에서 플레이어 기본 스탯을 불러와 고정값으로 관리합니다.
+> 인게임 수치 변화는 무기 강화에 따라 무기 스탯이 변경되는 방식으로 동작합니다.
 
+<br>
+
+## 📁 폴더 구조
+
+```
+📦 Assets
+ ┣ 📂 Scripts
+ ┃ ┣ 📂 Character        # 플레이어 캐릭터
+ ┃ ┣ 📂 Controllers      # 카메라, 무기 컨트롤러
+ ┃ ┣ 📂 DebugScripts     # 개발용 디버그 도구
+ ┃ ┣ 📂 Managers         # DataManager, GameManager, UIManager
+ ┃ ┣ 📂 Monster          # 몬스터 AI, 풀링, 상태관리
+ ┃ ┣ 📂 SkillProjectiles # 스킬 및 투사체
+ ┃ ┣ 📂 UI               # HUD, 메뉴, 팝업 UI
+ ┃ ┣ 📂 Utils            # 싱글톤, 공용 유틸
+ ┃ ┗ 📂 Weapons          # 무기 개별 구현체
+ ┣ 📂 Terrains           # 지형 데이터
+ ┣ 📂 _TerrainAutoUpgrade
+ ┃
+ ┣ 📂 3D Cartoon Village     # ※ Asset Store
+ ┗ 📂 RPGMonsterBuddiesPBRPA # ※ Asset Store
+
+
+> ※ 외부 에셋은 레포에 포함되지 않습니다.  
+> Unity Asset Store에서 직접 임포트 후 사용해주세요.
+
+```
 <br>
 
 ## 🌿 브랜치 전략
