@@ -29,10 +29,35 @@
 
 <br>
 
+## 🌿 브랜치 전략
+
+| 브랜치 | 설명 |
+|--------|------|
+| `main` | 통합 브랜치 |
+| `SJ` | 성준 작업 브랜치 |
+| `XX` | 팀원 작업 브랜치 |
+
+### 규칙
+- 각자 본인 브랜치에서 작업
+- 작업 완료 후 `main`으로 PR
+
+<br>
+
+## 📝 커밋 메시지
+
+| Prefix | 용도 |
+|--------|------|
+| `[add]` | 새 파일, 기능 추가 |
+| `[update]` | 기존 기능 개선 및 수정 |
+| `[fix]` | 버그 수정 |
+| `[edit]` | 오탈자, 주석, 문서 등 소규모 수정 |
+
+<br>
+
 ## 🛠 기술 스택
 
 | 분류 | 사용 기술 |
 |------|-----------|
-| 엔진 | Unity |
-| 언어 | C#, JSON |
-| 기타 | 로컬 DB |
+| 엔진 | ![Unity](https://img.shields.io/badge/Unity_2021.3-000000?style=for-the-badge&logo=unity&logoColor=white) |
+| 언어 | ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=sharp&logoColor=white) |
+| DB | ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white) |
