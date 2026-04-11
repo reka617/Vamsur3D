@@ -1,5 +1,5 @@
 # 🧛 VamSur3D
-![image alt](https://github.com/reka617/Vamsur3D/blob/562e08892bbdd35705e44962704ce71c734ee7b3/ProjectCover2.png)
+![image alt](https://github.com/reka617/Vamsur3D/blob/7593e25c7333ba5c8493108e999fa6e33504d377/ProjectCover3.png)
 
 > 2022년 유행이던  Vampire Survivors를 3D화해서 모작한 게임입니다.
 
