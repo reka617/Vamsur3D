@@ -22,15 +22,28 @@
 ### 📂 JSON 기반 로컬 데이터 관리
 > JSON 파싱을 통해 게임 데이터를 로컬에서 저장 및 불러옵니다.
 > 플레이어 초기 스탯 및 무기 데이터를 JSON 포맷으로 관리합니다.
+> 📄 [DataManager.cs - Init() 메서드 보기](https://github.com/reka617/Vamsur3D/blob/6c814a3ce5748722f567a4122d02b56a80133179/Assets/Scripts/Managers/DataManager.cs#L21-L46)
 
 ### 🧟 몬스터 AI 시스템
 > FSM(유한 상태 머신) 기반으로 몬스터 행동 패턴을 구현했습니다.
 > Object Pooling으로 몬스터 생성/제거 비용을 최소화하고,
 > Factory Pattern으로 몬스터 종류별 생성을 관리합니다.
+> 📄 [MonsterState.cs 보기](https://github.com/reka617/Vamsur3D/blob/6c814a3ce5748722f567a4122d02b56a80133179/Assets/Scripts/Monster/MonsterState.cs#L6)
+> 📄 [MonsterFactory.cs 보기](https://github.com/reka617/Vamsur3D/blob/6c814a3ce5748722f567a4122d02b56a80133179/Assets/Scripts/Monster/MonsterFactory.cs#L4)
 
 ### ⚔️ 플레이어 / 무기 스탯 시스템
 > JSON에서 플레이어 기본 스탯을 불러와 고정값으로 관리합니다.
 > 인게임 수치 변화는 무기 강화에 따라 무기 스탯이 변경되는 방식으로 동작합니다.
+> 📄 [Weaponbase.cs 보기](https://github.com/reka617/Vamsur3D/blob/6c814a3ce5748722f567a4122d02b56a80133179/Assets/Scripts/Weapons/WeaponBase.cs#L3)
+
+<br>
+
+## 🚀 설치 및 실행 방법
+별도의 Unity 설치 없이 바로 플레이할 수 있습니다.
+
+1. [Releases](https://github.com/reka617/Vamsur3D/releases/tag/v1.0.0) 페이지에서 최신 버전의 `.zip` 파일을 다운로드합니다.
+2. 압축을 해제합니다.
+3. `VamSur3D.exe`를 실행합니다.
 
 <br>
 
