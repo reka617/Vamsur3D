@@ -21,7 +21,7 @@ public class MenuUIController : MonoBehaviour
     List<GameObject> infoBoxTmps = new List<GameObject>();
 
     // Start is called before the first frame update
-    public void OnSelectCharacterMenu()//메뉴씬 캐릭터선택신 소환버튼
+    public void OnSelectCharacterMenu()
     {
         CharacterMenuPanel.SetActive(true);
         initCharaterSelectBox();
@@ -77,7 +77,7 @@ public class MenuUIController : MonoBehaviour
 
     public void initWeaponSelectBox()
     {
-        // 무기 개수만큼 로드하고 데이터도 전달하기
+        
         List<Define.WeaponType> weaponTypes = new List<Define.WeaponType>(GenericSingleton<DataManager>.getInstance().WeaponDict.Keys);
         foreach (Define.WeaponType weaponType in weaponTypes)
         {
@@ -97,11 +97,11 @@ public class MenuUIController : MonoBehaviour
         }
     }
 
-    // MainStart 테스트코드
-    //캐릭터 선택된 정보 메인씬으로 전달
-    public void TestStartMain()//Define.HeroType heroType 으로 타입받아서 데이터 변경
+    // MainStart ???????
+    //캐???? ????? ???? ???刮????? ????
+    public void TestStartMain()//Define.HeroType heroType ???? ?????? ?????? ????
     {
-        GenericSingleton<GameManager>.getInstance().GameStart(); //캐릭터 타입 게임메니저에 제네릭싱글톤으로 정보 저장
+        GenericSingleton<GameManager>.getInstance().GameStart(); //캐???? ??? ?????????? ?????????????? ???? ????
         SceneManager.LoadScene("MainScene");
     }
 }

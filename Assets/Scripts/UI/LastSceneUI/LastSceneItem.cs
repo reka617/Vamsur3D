@@ -14,7 +14,6 @@ public class LastSceneItem : MonoBehaviour
     public void init()//무기정보 받아서 출력값 변경
     {
         Debug.Log("init");
-       // _weaponData =  GenericSingleton<GameManager>.getInstance().TotalDmg;
         _name.text = "" +GenericSingleton<GameManager>.getInstance().name;
         _lv.text = " LV." + GenericSingleton<GameManager>.getInstance().HeroLv;
         _dmg.text = "무기데미지 : " + GenericSingleton<GameManager>.getInstance().TotalDmg;

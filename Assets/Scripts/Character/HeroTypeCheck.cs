@@ -1,4 +1,4 @@
-using Define;
+
 using UnityEngine;
 public class HeroTypeCheck: MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class HeroTypeCheck: MonoBehaviour
         Debug.Log(_heroData);
         HeroPrefabLoad();
     }
-    public void HeroCheck(HeroType inheroType)
+    public void HeroCheck(Define.HeroType inheroType)
     {
         Define.HeroType heroType = inheroType;
         Define.Hero heroData = GenericSingleton<DataManager>.getInstance().GetHeroInfo(heroType);

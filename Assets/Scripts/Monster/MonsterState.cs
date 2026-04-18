@@ -30,10 +30,7 @@ namespace State
             if (GenericSingleton<UIManager>.getInstance().IsStop) monsterSpeed = 0;
             else monsterSpeed = 2;
             _hero = GenericSingleton<GameManager>.getInstance().Player.gameObject.GetComponent<Hero>();
-            // trans = GenericSingleton<GameManager>.getInstance().Player.gameObject.transform;//Hero스크립트를 받을 이유가 안보임
-            //플레이어를 따라가도록 하는 기능
             _monster.transform.LookAt(new Vector3(_hero.transform.position.x, _monster.transform.position.y, _hero.transform.position.z));
-
             _monster.transform.position = Vector3.MoveTowards(_monster.transform.position, _hero.transform.position, Time.deltaTime * monsterSpeed);
         }
     }

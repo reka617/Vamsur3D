@@ -22,7 +22,6 @@ public class SkillProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // tag로 몬스터인지 확인해서 몬스터일 때만 데미지 주기
         if (!other.CompareTag("Monster"))
             return;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class MonsterBase
+public abstract class  MonsterBase
 {
     protected GameObject _obj;
     protected Define.Monster _monStat;

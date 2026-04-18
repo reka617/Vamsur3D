@@ -47,16 +47,18 @@ public class DataManager : MonoBehaviour
 
     public void MoveJsonFile()
     {
-        string sourceDir = "Assets/Resources/Data";
+        
         string moveDir = Application.persistentDataPath + "/VamSurData";
+        
+        TextAsset jsonFile = Resources.Load<TextAsset>("Data/CurrentWeaponInhanceData");
 
-        string[] JsonList = Directory.GetFiles(sourceDir, "CurrentWeaponInhanceData.json");
-
-        foreach (string f in JsonList)
+        if (jsonFile == null)
         {
-            string fName = f.Substring(sourceDir.Length + 1);
-            File.Copy(Path.Combine(sourceDir, fName), Path.Combine(moveDir, fName));
+            Debug.LogError("CurrentWeaponInhanceData.json을 Resources/Data에서 찾을 수 없음");
+            return;
         }
+
+        File.WriteAllText(Path.Combine(moveDir, "CurrentWeaponInhanceData.json"), jsonFile.text);
         
     }
 
@@ -88,8 +90,7 @@ public class DataManager : MonoBehaviour
     public void SetWeaponEnhanceLevel(Define.WeaponType weaponType, int level)
     {
         _currentWeaponEnhanceDict[weaponType] = level;
-        // 데이터 저장
-        Util.SaveJson(_currentWeaponEnhanceDict,"VamSurData", "CurrentWeaponInhanceData.json");
+        Util.SaveJson(_currentWeaponEnhanceDict,"CurrentWeaponInhanceData.json", "VamSurData");
     }
 
     public Define.Monster GetMonsterInfo(Define.MonsterType monsterType)

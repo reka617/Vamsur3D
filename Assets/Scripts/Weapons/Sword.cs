@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Sword : WeaponBase
 {
-    GameObject _attackJudge; // ½ºÅ³¿ÀºêÁ§Æ®
-    float _rebound; // ½ºÅ³¹üÀ§¸¦ À§ÇÑ º¯¼ö
-    float _detectTime;  //½ºÅ³¶óÀÌÇÁÅ¸ÀÓ
+    GameObject _attackJudge; // ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    float _rebound; // ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    float _detectTime;  //ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½
 
     protected override void InitSkill(Define.Weapon data)
     {
@@ -37,9 +37,10 @@ public class Sword : WeaponBase
 
     void Skill()
     {
+        PlayWeaponSound();
+        
         GameObject skillJudgeInstance = Instantiate(_attackJudge);
         skillJudgeInstance.GetComponent<SkillProjectile>().Init(GetPower());
-        // transform.rotaionÀ¸·Î º¤ÅÍ ±¸ÇØº¸±â
         float rad = GetMouseDirAngle();
         float tempRad = Random.Range(rad - _rebound, rad + _rebound);
         Vector3 vec = new Vector3(Mathf.Sin(tempRad), 0f, Mathf.Cos(tempRad));

@@ -50,17 +50,17 @@ public class WeaponSelectItemUI : MonoBehaviour
 
     void SetData(string imageUrl, string itemName, string itemRank, string itemDesc, int nextLevel, string nextlevelOption)
     {
-        // 이미지
+
         _itemImage.sprite = Resources.Load<Sprite>(imageUrl);
-        // 이름
+
         _itemName.text = itemName;
-        // 등급
+
         _itemRank.text = itemRank;
-        // 설명
+
         _itemDesc.text = itemDesc;
-        // 레벨
+
         _nextLevelText.text = "Level " + nextLevel.ToString();
-        // 레벨 옵션
+
         _levelOptionText.text = nextlevelOption;
     }
 

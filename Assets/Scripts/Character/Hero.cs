@@ -1,18 +1,23 @@
+using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using System.Collections;
+
 enum EHeroMove
 {
     Idle,
     die,
 }
+
 public class Hero : MonoBehaviour
 {
     HeroState _heroState;
     HeroTypeCheck _heroTypeCheck = new HeroTypeCheck();
     Define.Monster _mStat;
+
     Define.Hero heroData;
     public Define.Hero _heroData { get { return heroData; } set { heroData = value; } }
+
     SkinnedMeshRenderer render;
     public SkinnedMeshRenderer _render { get { return render; } set { render = value; } }
 
@@ -21,55 +26,66 @@ public class Hero : MonoBehaviour
 
     Color heroColor;
     public Color _heroColor { get { return heroColor; } set { heroColor = value; } }
+
     Vector3 fors;
     public Vector3 _fors { get { return fors; } set { fors = value; } }
+
+    float lastHitTime;
+    public float _lastHitTime { get { return lastHitTime; } }
+
+    float hitCooldown = 0.5f;
+    public float _hitCooldown { get { return hitCooldown; } }
+
+    float hp = 0f;
+    public float _hP { get { return hp; } set { hp = value; } }
+
+    bool _isDie = false;
     bool hit = false;   public bool _hit { get { return hit; } set { hit = value; } }
-    float hp = 0f;   public float _hP { get { return hp; } set { hp = value; } }
-    bool _isDie = false; 
+    
+
     void Start()
     {
         _isDie = false;
+        lastHitTime = -hitCooldown; // ÏãúÏûë Ï¶âÏãú ÌîºÍ≤© Í∞ÄÎä•Ìïú ÏÉÅÌÉú
         HeroDataSave();
-        Debug.Log(_ani);
-        Debug.Log(GenericSingleton<GameManager>.getInstance().SurviveTime);
-        _heroState = new HeroMove();
-        SetStateHero(new HeroMove());// ªÛ≈¬ ¿˙¿Â,Ω««‡
+        SetStateHero(new HeroMove());
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SetStateHero(new DieState());
-        }
         GenericSingleton<GameManager>.getInstance().SurviveTime += Time.deltaTime;
         _heroState.NowState();
         _heroState.HittedColer();
-        // ∞Ê«Ëƒ° »πµÊ ¿”Ω√ ƒ⁄µÂ // ∏ÛΩ∫≈Õ∞° ¡◊æ˙¿ª∂ß Ω««‡«œ∞‘ ∏ÛΩ∫≈Õ ƒ⁄µÂø° ¿÷¥¬∞‘ ∏¬¿Ω ∏ÛΩ∫≈Õ ∏∂¥Ÿ ∞Ê«Ëƒ°∞° ¥Ÿ∏£¥œ
+
         if (Input.GetKeyDown(KeyCode.E))
             GenericSingleton<GameManager>.getInstance().GetExp(50);
     }
+
     public void MonsterInfo(Monster monster)
     {
-        Debug.Log("MonsterInfo" + (_mStat == null));
         _mStat = monster.sendMonsterStat;
     }
+
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.GetComponent<Monster>() != null)
         {
             MonsterInfo(collision.gameObject.GetComponent<Monster>());
-            if (_hit == false) StartCoroutine(HittedWait());
+            if (_hit == false) HittedWait().Forget();
         }
     }
-    IEnumerator HittedWait()
+
+    private async UniTaskVoid HittedWait()
     {
         _hit = true;
         Hitted();
-        yield return new WaitForSeconds(0.5f);
+        await UniTask.Delay(500, cancellationToken: this.GetCancellationTokenOnDestroy());
         _hit = false;
     }
     public void Hitted()
     {
+        SoundManager.Instance.PlayHitSound();
+        
         _hP -= _mStat.power;
         Debug.Log(_hP);
         if (_hP <= 0&&_isDie == false)
@@ -78,14 +94,16 @@ public class Hero : MonoBehaviour
             SetStateHero(new DieState());
         }
     }
+
     public void SetStateHero(HeroState state)
     {
         _heroState = state;
         _heroState.OnEnter(this);
     }
+
     void HeroDataSave()
     {
-       _heroTypeCheck.HeroCheck(GenericSingleton<GameManager>.getInstance().HeroType);
+        _heroTypeCheck.HeroCheck(GenericSingleton<GameManager>.getInstance().HeroType);
         _heroData = _heroTypeCheck._heroData;
         _ani = GetComponentInChildren<Animator>();
         _render = GetComponentInChildren<SkinnedMeshRenderer>();
@@ -94,16 +112,19 @@ public class Hero : MonoBehaviour
         GenericSingleton<GameManager>.getInstance().Player = gameObject;
     }
 }
+
 public class HeroState
 {
     protected Hero _hero;
-   protected float _dieTimer, _hitTimer = 0f;
+    protected float _dieTimer, _hitTimer = 0f;
+
     public virtual void OnEnter(Hero hero)
     {
         _hero = hero;
     }
-    public virtual void HeroDieState() { }
+
     public virtual void NowState() { }
+
     public void HittedColer()
     {
         if (_hero._hit == true)
@@ -118,58 +139,64 @@ public class HeroState
         }
     }
 }
+
 public class HeroMove : HeroState
 {
     public override void OnEnter(Hero hero)
     {
         base.OnEnter(hero);
     }
+
     public override void NowState()
     {
-        float vX = Input.GetAxisRaw("Horizontal");//0=>1D==     -1,1,0∞™¿Ã ∞Ëº”µÈæÓø»
-        float vZ = Input.GetAxisRaw("Vertical");//GetAxis 0=0.1=0.2=0.3===1
+        float vX = Input.GetAxisRaw("Horizontal");
+        float vZ = Input.GetAxisRaw("Vertical");
         _hero._ani.SetFloat("AxisX", vX * _hero._heroData.moveSpeed);
         _hero._ani.SetFloat("AxisZ", vZ * _hero._heroData.moveSpeed);
-        float vY = _hero.GetComponent<Rigidbody>().velocity.y; //velocity == Rigidbody º”µµ
+
+        float vY = _hero.GetComponent<Rigidbody>().velocity.y;
         Vector3 v3 = new Vector3(vX, 0, vZ).normalized;
         Vector3 vYz = v3 * 4.5f;
         vYz.y += vY;
         _hero.GetComponent<Rigidbody>().velocity = vYz;
+
         if (Input.GetButton("Horizontal") && vX != 0)
-        {
             _hero.transform.rotation = Quaternion.LookRotation(new Vector3(vYz.x, 0, vYz.z));
-        }
+
         if (Input.GetButton("Vertical") && vZ != 0)
-        {
             _hero.transform.rotation = Quaternion.LookRotation(new Vector3(vYz.x, 0, vYz.z));
-        }
-    
     }
 }
+
 public class DieState : HeroState
 {
     public override void OnEnter(Hero hero)
     {
         base.OnEnter(hero);
     }
+
     public override void NowState()
     {
         _hero._ani.SetInteger("HeroMove", (int)EHeroMove.die);
         _hero.GetComponent<Rigidbody>().velocity = Vector3.zero;
         _hero.SetStateHero(new Scenechange());
     }
+
     public class Scenechange : HeroState
     {
         public override void OnEnter(Hero hero)
         {
             base.OnEnter(hero);
         }
+
         public override void NowState()
         {
-            Debug.Log("Scenechange");
             _dieTimer += Time.deltaTime;
             if (_dieTimer >= 1f)
             {
+                SoundManager.Instance.StopMusic(); 
+                SoundManager.Instance.StopSound();
+                
                 GenericSingleton<UIManager>.getInstance().Clear();
                 SceneManager.LoadScene("LastScene");
             }

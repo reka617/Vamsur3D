@@ -26,6 +26,11 @@ public abstract class WeaponBase : MonoBehaviour
     }
 
     protected abstract void StartSkill();
+    
+    protected void PlayWeaponSound()
+    {
+        SoundManager.Instance.PlayWeaponSound(_weaponType);
+    }
 
     protected float GetMouseDirAngle()
     {
@@ -44,7 +49,7 @@ public abstract class WeaponBase : MonoBehaviour
     public float GetPower()
     {
         return _power * GenericSingleton<DataManager>.getInstance().GetWeaponEnhanceInfo(_weaponType, _enhanceLevel).power;
-        //¹«±â°ø°Ý·Â  * ¹«±âÅ¸ÀÔ¿¡ ¹«±â °­È­µÈ Á¤µµ¿¡ 
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý·ï¿½  * ï¿½ï¿½ï¿½ï¿½Å¸ï¿½Ô¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
     }
 
     public abstract void Clear();

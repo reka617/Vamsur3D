@@ -41,13 +41,13 @@ public class Bible : WeaponBase
         {
             if (isActive)
             {
-                // º“»Ø
+                PlayWeaponSound();
                 foreach (GameObject bible in _bibles)
                     bible.SetActive(true);
 
                 while (timer < _lifeTime)
                 {
-                    // »∏¿¸
+                    // »∏ÔøΩÔøΩ
                     for (int i = 0; i < _bibles.Count; i++)
                     {
                         float rotDeg = (360f / _projectileCount) * i + timer * _projectileSpeed;
@@ -63,7 +63,7 @@ public class Bible : WeaponBase
             }
             else
             {
-                // ªË¡¶
+                // ÔøΩÔøΩÔøΩÔøΩ
                 foreach (GameObject bible in _bibles)
                     bible.SetActive(false);
 

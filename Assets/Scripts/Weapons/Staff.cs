@@ -34,8 +34,9 @@ public class Staff : WeaponBase
 
     void Fire()
     {
+        PlayWeaponSound();
         float rad = GetMouseDirAngle();
-        // ÇØ´ç °¢µµ·Î ¹ß»ç
+        // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½
         Vector3 moveVec = new Vector3(Mathf.Sin(rad), 0f, Mathf.Cos(rad));
 
         GameObject instance = Instantiate(_arrow, transform.position + moveVec + Vector3.up, Quaternion.AngleAxis(rad * Mathf.Rad2Deg, Vector3.up));

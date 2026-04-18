@@ -42,8 +42,13 @@ public static class Util
     #region
     public static void SaveJson<T>(T data, string fileName, string folderName)
     {
+        string dirPath = Application.persistentDataPath + "/" + folderName;
+        
+        if (!Directory.Exists(dirPath))
+            Directory.CreateDirectory(dirPath);
+
         string json = JsonConvert.SerializeObject(data);
-        using (StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/" + fileName + "/" + folderName))
+        using (StreamWriter sw = new StreamWriter(dirPath + "/" + fileName))
         {
             sw.Write(json);
         }

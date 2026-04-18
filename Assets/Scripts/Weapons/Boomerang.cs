@@ -24,6 +24,7 @@ public class Boomerang : WeaponBase
         {
             for (int i = 0; i < _projectileCount; i++)
             {
+                PlayWeaponSound();
                 float rot = GetMouseDirAngle();
                 Vector3 mouseVec = new Vector3(Mathf.Sin(rot), 0f, Mathf.Cos(rot));
                 GameObject instance = Instantiate(_original);

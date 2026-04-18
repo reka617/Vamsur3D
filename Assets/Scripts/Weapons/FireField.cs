@@ -8,8 +8,8 @@ public class FireField : WeaponBase
 
     float _lifeTime = 3f;
 
-    // power¿¡ µû¶ó ¶³¾îÁö´Â ¿î¼® ¼ö Á¶Á¤
-    // Å©±â Á¶Á¤ °¡´ÉÇÏµµ·Ï ¼öÁ¤
+    // powerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¼® ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    // Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     protected override void InitSkill(Define.Weapon data)
     {
@@ -28,6 +28,7 @@ public class FireField : WeaponBase
         {
             for (int i = 0; i < _projectileCount; i++)
             {
+                PlayWeaponSound();
                 Vector3 spawnPos = transform.position + new Vector3(Random.Range(-10f, 10f), 0.2f, Random.Range(-10f, 10f));
                 GameObject instance = Instantiate(_original, spawnPos, Quaternion.identity);
                 instance.GetComponent<SkillProjectile>().Init(GetPower());
